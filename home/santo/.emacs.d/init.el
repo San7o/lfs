@@ -12,8 +12,7 @@
 
 (require 'package)
 (add-to-list 'package-archives
-	     '("MELPA" .
-	       "http://melpa.org/packages/"))
+	     '("MELPA" . "http://melpa.org/packages/"))
 (package-initialize)
 ;; ################ MELPA END ##################
 
@@ -235,10 +234,10 @@
           ;; Brightness
           ([XF86MonBrightnessUp] . (lambda()
 				   (interactive)
-				   (shell-command "brightnessctl s +5%")))
+				   (shell-command "echo $(( $(cat /sys/class/backlight/intel_backlight/brightness) + 10000)) > /sys/class/backlight/intel_backlight/brightness")))
           ([XF86MonBrightnessDown] . (lambda()
 				   (interactive)
-				   (shell-command "brightnessctl s 5%-")))
+				   (shell-command "echo $(( $(cat /sys/class/backlight/intel_backlight/brightness) - 10000)) > /sys/class/backlight/intel_backlight/brightness")))
       ))
 
   (exwm-enable)
