@@ -1,0 +1,18 @@
+# Begin /etc/fstab
+
+# file system  mount-point    type     options                           dump  fsck
+#                                                                              order
+
+UUID=38ec5e62-7c29-4162-8396-9684b6c101f1     /      ext4     defaults   1     1
+UUID=1241-8058     /boot/efi  vfat     codepage=437,iocharset=iso8859-1  1     2
+UUID=4420d081-7e7e-442e-b24f-e95a2163204b     swap       swap     pri=1  0     0
+proc           /proc          proc     nosuid,noexec,nodev               0     0
+sysfs          /sys           sysfs    nosuid,noexec,nodev               0     0
+devpts         /dev/pts       devpts   gid=5,mode=620                    0     0
+tmpfs          /run           tmpfs    defaults                          0     0
+devtmpfs       /dev           devtmpfs mode=0755,nosuid                  0     0
+tmpfs          /dev/shm       tmpfs    nosuid,nodev                      0     0
+cgroup2        /sys/fs/cgroup cgroup2  nosuid,noexec,nodev               0     0
+efivarfs       /sys/firmware/efi/efivars efivarfs defaults               0     0
+
+# End /etc/fstab
