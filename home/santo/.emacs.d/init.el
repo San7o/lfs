@@ -11,9 +11,11 @@
 ;; Onlline package repository
 
 (require 'package)
-(add-to-list 'package-archives
-	     '("MELPA" . "http://melpa.org/packages/"))
-(package-initialize)
+(setq package-archives '(
+	     ("GNU" . "http://elpa.gnu.org/packages/")
+	     ("MELPA" . "http://melpa.org/packages/")
+	     ))
+(unless package--initialized (package-initialize))
 ;; ################ MELPA END ##################
 
 ;; ############### THEME BEGIN #################
@@ -98,6 +100,15 @@
 (require 'undo-tree)
 (global-undo-tree-mode)
 ;; ############### UNDO-TREE END ###############
+
+;; ################ EMMS BEGIN #################
+;; Emms is an emacs music player
+
+(require 'emms)
+(emms-all)
+(setq emms-player-list '(emms-player-vlc)
+      emms-info-functions '(emms-info-native))
+;; ################# EMMS END ##################
 
 ;; ############ OBSIDIAN BEGIN ################
 ;; Obsidian for emacs is a package aiming to
@@ -220,17 +231,17 @@
           ;; Audio keys
           ([XF86AudioRaiseVolume] . (lambda ()
 				      (interactive)
-				      (shell-command "amixer -D pipewire sset Master 5%+")))
+				      (shell-command "amixer set Master 5%+")))
           ([XF86AudioLowerVolume] . (lambda ()
 				      (interactive)
-				      (shell-command "amixer -D pipewire sset Master 5%-")))
+				      (shell-command "amixer set Master 5%-")))
 	   
           ([XF86AudioMute] . (lambda()
 			       (interactive)
-			       (shell-command "amixer -D pipewire sset Master toggle")))
+			       (shell-command "amixer set Master toggle")))
           ([XF86AudioMicMute] . (lambda()
 				   (interactive)
-				   (shell-command "amixer -D pipewire sset Master toggle")))
+				   (shell-command "amixer set Master toggle")))
           ;; Brightness
           ([XF86MonBrightnessUp] . (lambda()
 				   (interactive)

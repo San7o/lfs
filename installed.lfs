@@ -244,3 +244,12 @@ alsa-lib 1.2.12
 alsa-utils 1.2.12
 alsa-firmware 1.2.4
 poppler 24.08.0
+yt-dlp 2024.11.04
+desktop-file-utils 0.27 
+libaom 3.9.1
+libical 3.0.18
+ffmpeg 7.0.2
+liba52 0.8.0
+libmad 0.15.1b
+lua 5.2.4
+vlc 3.0.21

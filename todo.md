@@ -83,6 +83,22 @@ Not a problem, DONE
 
 Next thing is gonna be audio, with alsa
 
+I installed alsa, configured kernel stuff,
+and installed vlc. Now works and I can use
+emms as a music player with vlc backend.
+Sadly the quality is not that great and
+I don't know how I will fix this. I will
+mark this as DONE.
+
+## Bluetooth
+
+I want to make bluetooth work for file transfer.
+
+I have installed BlueZ and paired with my phone
+but I still cannot transfer files. Probably
+I need something like Obexd or bluetooth-sendto
+wich do not have instructions on blfs.
+
 ## asciidoc
 
 I cannot install this python library because
@@ -116,3 +132,4 @@ Similar to firmware, there are a number of
 usless flags I acrivated during desperate times
 that are not really needed. I should look at
 this in the future.
+hi:)
