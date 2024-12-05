@@ -3,6 +3,70 @@
 This file contains notes on work-in-progress
 changes
 
+## Firefox
+
+You can do it!
+
+## BPF
+
+Install libbpf and bpftools, follow the hello
+world example in `sartura/ebpf-hello-world`
+
+## Inkscape
+
+Would be nice
+
+## Docker
+
+Idem
+
+## Bluetooth
+
+I want to make bluetooth work for file transfer.
+
+I have installed BlueZ and paired with my phone
+but I still cannot transfer files. Probably
+I need something like Obexd or bluetooth-sendto
+wich do not have instructions on blfs.
+
+## asciidoc
+
+I cannot install this python library because
+of 
+```
+ssl.SSLError: [X509: NO_CERTIFICATE_OR_CRL_FOUND]
+no certificate or crl found (_ssl.c:4146)
+```
+I have briefly investigated the issue, installed
+make-ca and other troubleshooting like specifying
+the certificates dir and file but I got no luck.
+This also happend with another python package,
+also I cannot use TLS on curl or wget so maybe
+I should start from there.
+
+## git
+
+Git was built without documentation because
+I cannot build asciidoc
+
+## Firmware
+
+For now I have installed the whole linux firmware
+from the official release, which is about 500MB.
+I could remove all the unnecessary crap after
+I have something that works.
+
+## Linux Flags
+
+Similar to firmware, there are a number of
+usless flags I acrivated during desperate times
+that are not really needed. I should look at
+this in the future.
+hi:)
+
+
+# DONE
+
 ## Xorg
 
 The next step is to install Xorg libraries
@@ -89,47 +153,3 @@ emms as a music player with vlc backend.
 Sadly the quality is not that great and
 I don't know how I will fix this. I will
 mark this as DONE.
-
-## Bluetooth
-
-I want to make bluetooth work for file transfer.
-
-I have installed BlueZ and paired with my phone
-but I still cannot transfer files. Probably
-I need something like Obexd or bluetooth-sendto
-wich do not have instructions on blfs.
-
-## asciidoc
-
-I cannot install this python library because
-of 
-```
-ssl.SSLError: [X509: NO_CERTIFICATE_OR_CRL_FOUND]
-no certificate or crl found (_ssl.c:4146)
-```
-I have briefly investigated the issue, installed
-make-ca and other troubleshooting like specifying
-the certificates dir and file but I got no luck.
-This also happend with another python package,
-also I cannot use TLS on curl or wget so maybe
-I should start from there.
-
-## git
-
-Git was built without documentation because
-I cannot build asciidoc
-
-## Firmware
-
-For now I have installed the whole linux firmware
-from the official release, which is about 500MB.
-I could remove all the unnecessary crap after
-I have something that works.
-
-## Linux Flags
-
-Similar to firmware, there are a number of
-usless flags I acrivated during desperate times
-that are not really needed. I should look at
-this in the future.
-hi:)
