@@ -3,10 +3,6 @@
 This file contains notes on work-in-progress
 changes
 
-## Firefox
-
-You can do it!
-
 ## BPF
 
 Install libbpf and bpftools, follow the hello
@@ -153,3 +149,9 @@ emms as a music player with vlc backend.
 Sadly the quality is not that great and
 I don't know how I will fix this. I will
 mark this as DONE.
+
+## Firefox
+
+You can do it!
+
+DONE!
