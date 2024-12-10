@@ -188,10 +188,13 @@
 ;; Read rss feeds on emacs
 
 (require 'elfeed)
-(require 'elfeed-dashboard)
+;;(require 'elfeed-dashboard)
 (setq elfeed-feeds
       '("https://discourse.llvm.org/c/announce/46.rss"
-	"https://discourse.llvm.org/c/llvm/5.rss"))
+	"https://discourse.llvm.org/c/llvm/5.rss"
+	"https://discourse.llvm.org/c/ir-optimizations/61.rss"
+	"https://discourse.llvm.org/c/milr/31.rss"
+        "http://feeds.feedburner.com/linuxquestions/latest"))
 ;; ############## ELFEED END #################
 
 
@@ -306,9 +309,9 @@
  '(package-selected-packages
    '(sudoku elfeed-dashboard elfeed bundler nndiscourse undo-tree diff-hl avy ivy pdf-tools org-drill typit which-key obsidian ## markdown-mode zerodark-theme vterm magit flycheck exwm evil))
  '(warning-suppress-types '((modus-themes))))
-(custom-set-faces
+;;(custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+;;l )
