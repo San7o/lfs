@@ -1,0 +1,11 @@
+! background color
+XTerm*background: black
+
+! text color
+XTerm*foreground: white
+
+! font size
+xterm*faceName: Monospace
+xterm*faceSize: 14
+
+! xrdb $HOME/.Xresources

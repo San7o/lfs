@@ -27,6 +27,7 @@ backup:
 	@sudo mkdir /home/santo 2>/dev/null || \:
 	@sudo cp /home/santo/.gitconfig home/santo/
 	@sudo cp /home/santo/.xinitrc home/santo
+	@sudo cp /home/santo/.Xresources home/santo
 	@sudo cp /home/santo/.bashrc home/santo
 	@sudo mkdir home/santo/.config home/santo/.config/i3 2>/dev/null || \:
 	@sudo cp -r /home/santo/.config/i3 home/santo/.config/i3
