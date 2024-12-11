@@ -109,6 +109,7 @@ updated via "make-ca".
 - /etc/sysconfig/mouse
 
 # Tips and Tricks
+
 List all the devices and the kernel module
 associated with them:
 ```
