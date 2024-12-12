@@ -8,4 +8,10 @@ XTerm*foreground: white
 xterm*faceName: Monospace
 xterm*faceSize: 14
 
+! setup clipboard
+Xterm*selectToClipboard: true
+XTerm*vt100.translations: #override \
+	Shift Ctrl <Key> C: copy-selection(CLIPBOARD) \n\
+	Shift Ctrl <Key> V: insert-selection(CLIPBOARD)
+
 ! xrdb $HOME/.Xresources

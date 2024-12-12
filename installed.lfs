@@ -320,3 +320,8 @@ yajl 2.1.0
 libev 4.33
 i3 4.24
 dmenu 5.3
+xclip 0.13
+imlib2 1.12.3
+feh 3.10.3
+strace 6.12
+libtraceevent 1.8.4

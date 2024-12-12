@@ -13,10 +13,11 @@ default_border pixel 3
 default_floating_border pixel 3
 
 # Colors
-client.focused  #fcba03 #fcba03 #fcba03 #fcba03 #fcba03
+#client.focused  #fcba03 #fcba03 #fcba03 #fcba03 #fcba03
+client.focused #FFFFFF #FFFFFF #FFFFFF #FFFFFF #FFFFFF 
 
 # Gaps!
-gaps inner 12
+gaps inner 0
 
 # Smart gaps (gaps used if only more than one container on the workspace)
 smart_gaps on
@@ -46,10 +47,14 @@ exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pipewire sset Master 10%+ && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pipewire sset Master 10%- && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id amixer -D pipewire sset Master toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id amixer -D pipewire sset Master toggle && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 10%+ && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 10%- && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id amixer set Master toggle && $refresh_i3status
+
+# Brightness controls
+bindsym XF86MonBrightnessUp exec echo $(( $(cat /sys/class/backlight/intel_backlight/brightness) +10000)) > /sys/class/backlight/intel_backlight/brightness 
+bindsym XF86MonBrightnessDown exec echo $(( $(cat /sys/class/backlight/intel_backlight/brightness) -10000)) > /sys/class/backlight/intel_backlight/brightness 
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -65,12 +70,7 @@ bindsym $mod+Return exec xterm
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-# bindsym $mod+d exec --no-startup-id dmenu_run
-# A more modern dmenu replacement is rofi:
-bindsym $mod+d exec "rofi -modi drun,run -show drun"
-# There also is i3-dmenu-desktop which only displays applications shipping a
-# .desktop file. It is a wrapper around dmenu, so you need that installed.
-# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec "dmenu_run"
 
 # change focus
 bindsym $mod+j focus left
@@ -202,3 +202,5 @@ bar {
 #       status_command i3status
 	position top
 }
+
+exec_always --no-startup-id /usr/bin/feh --bg-scale /home/santo/papers/win11.jpg
