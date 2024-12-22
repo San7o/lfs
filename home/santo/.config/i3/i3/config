@@ -203,4 +203,4 @@ bar {
 	position top
 }
 
-exec_always --no-startup-id /usr/bin/feh --bg-scale /home/santo/papers/win11.jpg
+exec_always --no-startup-id /usr/bin/feh --bg-scale /home/santo/papers/free_as_in_freedom.png

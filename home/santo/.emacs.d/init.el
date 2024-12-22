@@ -56,7 +56,9 @@
 ;; :q
 
 (require 'evil)
+(require 'evil-commentary)
 (evil-mode 1)
+(evil-commentary-mode)
 ;; ################## EVIL END ################
 
 
@@ -215,6 +217,10 @@
 ;; PDF Reader
 (pdf-tools-install)
 (pdf-loader-install)
+
+;; Column Line
+(global-display-fill-column-indicator-mode 1)
+(setq global-display-fill-column-indicator-column 80)
 ;; ############### MISC END ###################
 
 
@@ -307,7 +313,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(sudoku elfeed-dashboard elfeed bundler nndiscourse undo-tree diff-hl avy ivy pdf-tools org-drill typit which-key obsidian ## markdown-mode zerodark-theme vterm magit flycheck exwm evil))
+   '(evil-commentary cmake-mode sudoku elfeed-dashboard elfeed bundler nndiscourse undo-tree diff-hl avy ivy pdf-tools org-drill typit which-key obsidian ## markdown-mode zerodark-theme vterm magit flycheck exwm evil))
  '(warning-suppress-types '((modus-themes))))
 ;;(custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -315,3 +321,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
 ;;l )
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
