@@ -358,3 +358,12 @@ libpcap 1.10.4
 iptables 1.8.10
 go 1.23.4
 autoconf-archive 2024.10.16
+lcms 2.16
+libgudev 238
+json-glib 1.8.0
+graphviz 12.1.0
+vala 0.57.17
+libgusb 0.4.9
+colord 1.4.7
+cups 2.4.10
+openjdk 22.0.2
