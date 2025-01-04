@@ -221,6 +221,20 @@
 ;; Column Line
 (global-display-fill-column-indicator-mode 1)
 (setq global-display-fill-column-indicator-column 80)
+
+;; LSP
+(require 'lsp-mode)
+(require 'yasnippet)
+(require 'helm-lsp)
+(require 'helm-mode)
+(require 'helm-xref)
+
+;; Language highlight
+(setq treesit-language-source-alist
+  '((c3 "https://github.com/c3lang/tree-sitter-c3")))
+
+(add-to-list 'load-path "~/.emacs.d/c3-ts-mode")
+(require 'c3-ts-mode)
 ;; ############### MISC END ###################
 
 
@@ -313,7 +327,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(evil-commentary cmake-mode sudoku elfeed-dashboard elfeed bundler nndiscourse undo-tree diff-hl avy ivy pdf-tools org-drill typit which-key obsidian ## markdown-mode zerodark-theme vterm magit flycheck exwm evil))
+   '(tree-sitter go-mode helm-xref yasnippet helm-lsp lsp-mode evil-commentary cmake-mode sudoku elfeed-dashboard elfeed bundler nndiscourse undo-tree diff-hl avy ivy pdf-tools org-drill typit which-key obsidian ## markdown-mode zerodark-theme vterm magit flycheck exwm evil))
  '(warning-suppress-types '((modus-themes))))
 ;;(custom-set-faces
  ;; custom-set-faces was added by Custom.

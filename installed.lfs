@@ -367,3 +367,5 @@ libgusb 0.4.9
 colord 1.4.7
 cups 2.4.10
 openjdk 22.0.2
+fuse 2.9.7
+tree-slitter 0.24.6

@@ -37,7 +37,9 @@ else
   export LANG=it_IT.utf8
 fi
 
-export PATH=$PATH:/usr/local/bin
+export PATH=$PATH:/usr/local/bin:$HOME/apps
+export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
+export LD_LIBRARY_PATH=/usr/local/lib
 export SSL_CERT_FILE=/etc/ssl/certs/cacert.pem
 
 for i in /etc/profile.d/*.sh ; do
