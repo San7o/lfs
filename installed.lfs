@@ -74,7 +74,7 @@ make 4.4.1
 patch 2.7.6
 tar 1.35
 texinfo 7.1
-vim 9.1.0660
+vim 9.1.1016 
 markupsafe 2.1.5
 jinja2 3.1.4
 udev 256.4
@@ -369,3 +369,5 @@ cups 2.4.10
 openjdk 22.0.2
 fuse 2.9.7
 tree-slitter 0.24.6
+rsync 3.4.0
+git 2.48.1
