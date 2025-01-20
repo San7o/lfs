@@ -371,3 +371,5 @@ fuse 2.9.7
 tree-slitter 0.24.6
 rsync 3.4.0
 git 2.48.1
+libassimp 5.4.3
+wxwidgets 3.2.6

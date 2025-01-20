@@ -235,6 +235,21 @@
 
 (add-to-list 'load-path "~/.emacs.d/c3-ts-mode")
 (require 'c3-ts-mode)
+
+;; Python mode
+(add-to-list 'load-path "~/.emacs.d/python-rdd")
+(load "setup-python-rdd-shell.el")
+(load "setup-python-rdd-overlay.el")
+(load "setup-python.el")
+
+;; Save *~ files in .emacs.d/backup
+(setq backup-directory-alist '(("." . "~/.emacs.d/backup"))
+  backup-by-copying t    ; Don't delink hardlinks
+  version-control t      ; Use version numbers on backups
+  delete-old-versions t  ; Automatically delete excess backups
+  kept-new-versions 20   ; how many of the newest versions to keep
+  kept-old-versions 5    ; and how many of the old
+  )
 ;; ############### MISC END ###################
 
 
@@ -327,7 +342,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(tree-sitter go-mode helm-xref yasnippet helm-lsp lsp-mode evil-commentary cmake-mode sudoku elfeed-dashboard elfeed bundler nndiscourse undo-tree diff-hl avy ivy pdf-tools org-drill typit which-key obsidian ## markdown-mode zerodark-theme vterm magit flycheck exwm evil))
+   '(elpy polymode py-isort tree-sitter go-mode helm-xref yasnippet helm-lsp lsp-mode evil-commentary cmake-mode sudoku elfeed-dashboard elfeed bundler nndiscourse undo-tree diff-hl avy ivy pdf-tools org-drill typit which-key obsidian ## markdown-mode zerodark-theme vterm magit flycheck exwm evil))
  '(warning-suppress-types '((modus-themes))))
 ;;(custom-set-faces
  ;; custom-set-faces was added by Custom.
