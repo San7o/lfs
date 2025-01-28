@@ -250,7 +250,12 @@
   kept-new-versions 20   ; how many of the newest versions to keep
   kept-old-versions 5    ; and how many of the old
   )
-;; ############### MISC END ###################
+
+;; Shortcuts
+;;(add-hook 'c-mode-common-hook
+;;	  (lambda () (define-key c-mode-base-map (kbd "C-c c") 'compile)))
+(global-set-key (kbd "C-c c") 'compile)
+;; ############### Misc END ###################
 
 
 ;; ############## EXWM BEGIN ##################
@@ -342,7 +347,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(elpy polymode py-isort tree-sitter go-mode helm-xref yasnippet helm-lsp lsp-mode evil-commentary cmake-mode sudoku elfeed-dashboard elfeed bundler nndiscourse undo-tree diff-hl avy ivy pdf-tools org-drill typit which-key obsidian ## markdown-mode zerodark-theme vterm magit flycheck exwm evil))
+   '(zig-mode elpy polymode py-isort tree-sitter go-mode helm-xref yasnippet helm-lsp lsp-mode evil-commentary cmake-mode sudoku elfeed-dashboard elfeed bundler nndiscourse undo-tree diff-hl avy ivy pdf-tools org-drill typit which-key obsidian ## markdown-mode zerodark-theme vterm magit flycheck exwm evil))
  '(warning-suppress-types '((modus-themes))))
 ;;(custom-set-faces
  ;; custom-set-faces was added by Custom.

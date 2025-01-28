@@ -32,7 +32,8 @@ backup:
 	@sudo cp /home/santo/.bashrc home/santo
 	@sudo cp /home/santo/.inputrc home/santo
 	@sudo mkdir home/santo/.config home/santo/.config/i3 2>/dev/null || \:
-	@sudo cp -r /home/santo/.config/i3 home/santo/.config/i3
+	@sudo cp -r /home/santo/.config/i3 home/santo/.config/
+	@sudo cp -r /home/santo/.config/i3status home/santo/.config
 	@sudo cp /home/santo/.emacs.d/init.el home/santo/.emacs.d/init.el
 	@sudo cp /boot/System.map boot
 	@sudo cp /boot/grub/grub.cfg boot/grub
